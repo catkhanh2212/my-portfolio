@@ -1,16 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Marcellus } from "next/font/google";
 import "./globals.css";
+import { Box } from "@mui/material";
+import Navbar from "./components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
+
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
+
+
+const marcellus = Marcellus({
   subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-marcellus",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,8 +35,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body className={marcellus.className}>
+        <Box
+          sx={{
+            backgroundColor: "#0b0b0b",
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Navbar />
+          {children}
+        </Box>
       </body>
     </html>
   );
