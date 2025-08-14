@@ -8,6 +8,14 @@ import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material';
 
 const projects = [
     {
+        image: "/projects/photobooth.jpg",
+        title: "Home-based Photobooth",
+        project: "Website",
+        duration: "1 week",
+        framework: "Next.js",
+        preview: "https://github.com/catkhanh2212/home-based-photobooth"
+    },
+    {
         image: "/projects/pharmacy.png",
         title: "Pharmacy Store",
         project: "Website",
